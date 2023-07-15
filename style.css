@@ -1,0 +1,373 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand",sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6, p ,a{
+    margin: 0;
+    padding: 10px 0;
+}
+
+h1 {
+    font-size: 4rem;
+    color: white;
+    font-weight: 400;
+}
+
+a, button {
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0.825rem 0;
+    padding: 0.825rem 1.125rem;
+    font-size: 0.825rem;
+    width: 200px;
+}
+
+/*============= HEADER =============*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    min-height: 70px;
+}
+
+
+#logo img{
+    padding-left: 3rem;
+}
+
+nav ul {
+    display: flex;
+    column-gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul a {
+    color: black;
+    font-size: 1rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+}
+
+@media only screen and (max-width: 1150px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        left: 0;
+        top: -100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        padding: 1rem 5rem;
+        transition: 0.3s;
+    }
+
+    nav li {
+        margin: 8px 0;
+    }
+
+    nav ul.active {
+        left: 0;
+        top: 100px;
+    }
+}
+
+/*============= BANNER =============*/
+
+#banner {
+    background-image: url("./Resources/Images/banner-spacex-unplash-1600x800.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+}
+
+.banner-content {
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10rem 7rem;
+}
+
+.banner-content p {
+    color: white;
+    font-size: 2rem;
+}
+
+/*============= FEATURE1 =============*/
+
+
+#feature1 h2 {
+    padding: 6rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight:300;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.image {
+    margin: 0 1rem;
+    padding-bottom: 4rem;
+    border: 1px solid gray;
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.image img {
+    width: 100%;
+}
+
+.image h3 {
+    padding-top: 3rem;
+}
+
+.image a {
+    color:#814ebf;
+    font-weight: 700; 
+    /* padding-top fail*/
+}
+
+/*============= FEATURE2 =============*/
+
+/*Khong the dung relative + absolute vi box se di chuyen khi screen size thay doi */
+
+
+#feature2 {
+    margin: 5rem 8rem;
+}
+
+.container {
+    display: flex;
+    margin-bottom: 8rem;
+    align-items: flex-start;
+}
+
+.container img {
+    width: 100%;
+}
+
+.container .box {
+    background-image: url("./Resources/Images/grey-pattern.b4f896f3f272.png");
+    transform: translate(-120px, 300px);
+    flex-shrink: 0;
+    width: 350px;
+    color: white;
+    padding: 2rem;
+}
+
+.container.right {
+    flex-direction: row-reverse;
+}
+
+.box.right {
+    transform: translate(120px, 300px);
+}
+
+@media only screen and (max-width: 1150px) {
+    #feature2 {
+        margin-left: 5rem;
+    }
+
+    .container .box {
+        transform: translate(-650px, 400px);
+        width: 100%;
+        margin-bottom: 20rem;
+    }
+
+    .box.right {
+        transform: translate(550px, 400px);
+        width: 90%;
+        margin-left: 100rem;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .container{ 
+        flex-direction: column;
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+
+    .container .box {
+        transform: translate(0,0);
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .container.right {
+        flex-direction: column;
+    }
+
+    .box.right {
+        transform: translate(0px, 0px);
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/*============= CONTACT1 =============*/
+
+.contact1 {
+    margin: 10rem 0 5rem;
+    text-align: center;
+}
+
+.contact1 h2{
+    font-weight: 500;
+}
+
+.contact1 button {
+    background-color: #814ebf;
+    border: 1px solid #814ebf;
+    color: white;
+}
+
+.contact1 button:hover{
+    background-color: #7a45ba;
+}
+
+/*============= TESTIFY =============*/
+
+.testify {
+    text-align: center;
+    width: 65%;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 880px) {
+    .contact1 {
+        margin: 1rem 0 3rem;
+    }
+}
+
+/*============= CONTACT2 =============*/
+
+.contact2 {
+    margin-top: 5rem;
+    padding: 2rem 5rem;
+    display: flex;
+    background-color: #814ebf;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact2 .contact2-text{
+    width: 70%;
+}
+
+.contact2 .contact2-text h2{
+    font-size: 1.825rem;
+}
+
+
+@media only screen and (max-width: 1150px) {
+    .contact2 {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .contact2 .contact2-text{
+        width: 100%;
+    }
+}
+/*============= FOOTER =============*/
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 3rem 5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+    padding-left: 2rem;
+}
+
+.icon.column {
+    padding-top: 1rem;
+}
+
+.icon img {
+    width: 30px;
+    margin-bottom: 5px;
+}
+
+.link a {
+    margin: 0;
+    padding: 5px 0;
+    color:white;
+    text-transform: capitalize;
+    font-size: 1.25rem;
+}
+
+footer h4{
+    color: gray;
+    font-weight: 500;
+    font-size: 0.825rem;
+}
+
+@media only screen and (max-width: 880px) {
+    footer {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .column {
+        flex-grow:1;
+    }
+}
+
+@media only screen and (max-width: 715px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon.column {
+        align-items: center;
+    }
+}
